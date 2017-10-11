@@ -4,24 +4,18 @@ import Image from "./Image";
 import { Menu, MenuItem, MenuDivider } from "@blueprintjs/core";
 
 class ImproveThis extends Component {
-	static propTypes = {};
+  static propTypes = {};
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			fullname: props.first_name + ' '+ props.last_name
-		};
-	}
-	
-	componentDidMount() {}
+  constructor(props) {
+    super(props);
+    this.state = {
+      fullname: props.first_name + " " + props.last_name
+    };
+  }
 
-	componentWillReceiveProps(nextProps) {}
-
-	render() {
-		return (
-			<span>{{ this.state.fullname }}</span>
-		);
-	}
+  render() {
+    return <span>{this.state.fullname}</span>;
+  }
 }
 
 export default ImproveThis;

@@ -4,55 +4,72 @@ import { Switch, Route } from "react-router-dom";
 import Test from "./Test";
 import Test2 from "./Test2";
 import Test3 from "./Test3";
+import improveThis from "./improveThis";
 
 import Sample from "./Sample";
 
 class Layout extends Component {
-	static propTypes = {};
+  static propTypes = {};
 
-	render() {
-		return (
-			<div>
-				<Switch>
-					<Route
-						exact
-						path="/test"
-						render={({ location }) =>
-							createElement(Test, {
-								location
-							})}
-					/>
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route
+            exact
+            path="/test"
+            render={({ location }) =>
+              createElement(Test, {
+                location
+              })}
+          />
 
-					<Route
-						exact
-						path="/test-2"
-						render={({ location }) =>
-							createElement(Test2, {
-								location
-							})}
-					/>
+          <Route
+            exact
+            path="/test-2"
+            render={({ location }) =>
+              createElement(Test2, {
+                location
+              })}
+          />
 
-					<Route
-						exact
-						path="/test-3"
-						render={({ location }) =>
-							createElement(Test3, {
-								location
-							})}
-					/>
+          <Route
+            exact
+            path="/test-3"
+            render={({ location }) =>
+              createElement(Test3, {
+                location
+              })}
+          />
 
-					<Route
-						exact
-						path="/sample"
-						render={({ location }) =>
-							createElement(Sample, {
-								location
-							})}
-					/>
-				</Switch>
-			</div>
-		);
-	}
+          <Route
+            exact
+            path="/sample"
+            render={({ location }) =>
+              createElement(Sample, {
+                location
+              })}
+          />
+
+          <Route
+            exact
+            path="/improveThis"
+            render={({ location }) =>
+              createElement(
+                improveThis,
+                {
+                  first_name: "john",
+                  last_name: "Doe"
+                },
+                {
+                  location
+                }
+              )}
+          />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default Layout;
