@@ -18,7 +18,12 @@ class Test2 extends Component {
 			{
 				method: "GET"
 			}
-		).then(respsonse => response.results);
+		).then(response => response.json()
+		).then(json => {
+			this.setState({
+				fetched: json.results,
+			});
+		});
 	}
 
 	render() {
