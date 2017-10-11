@@ -26,7 +26,7 @@ There is one or more bugs in this page, please fix it.
 
 #### Test 3 - At url "http://localhost:6076/#/test-3"
 This page is a very simple counter, the user click on the button "Click here", and the counter value should be incremented of 1.    
-This bug can be fixed in two different ways, please write 2 valid solutions to fiw this bug. (You can write your second solution as a code comment).   
+This bug can be fixed in two different ways, please write 2 valid solutions to fix this bug. (You can write your second solution as a code comment).   
 Please explain what caused this bug with a comment at the beginning of this file `/src/components/Test3.js`
 
 
