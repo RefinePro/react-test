@@ -1,3 +1,8 @@
+// ERROR EXPLANATION:
+// the error was there because javascript es6 classes
+// don't have methods binded to class context by default,
+// es6 classes are merely a syntax sugar over prototypal inheritance
+
 import React, { Component, PropTypes } from "react";
 
 import Image from "./Image";
@@ -19,9 +24,12 @@ class Test3 extends Component {
 		this.state = {
 			counter: 0
 		};
+
+		// second solution is to .bind() the context in the constructor
+		// this.incrementCounter = this.incrementCounter.bind(this);
 	}
 
-	incrementCounter() {
+	incrementCounter = () => {
 		this.setState({ counter: this.state.counter + 1 });
 	}
 
